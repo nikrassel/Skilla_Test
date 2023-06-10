@@ -10,7 +10,7 @@
 
 .datecomponent {
     position: absolute;
-    width: 90px;
+    width: 140px;
     height: 22px;
     left: 120px;
     top: calc(50% - 22px/2);
@@ -22,4 +22,202 @@
     display: flex;
     align-items: flex-end;
     color: #899CB1;
+}
+
+.analyticssection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 56px;
+    position: absolute;
+    width: 594px;
+    height: 34px;
+    left: 296px;
+    top: 5px;
+}
+
+.section {
+    width: 200px;
+    height: 34px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.analytictext {
+    position: absolute;
+    width: 162px;
+    height: 21px;
+    left: 0px;
+    top: calc(50% - 21px/2 - 6.5px);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: flex-end;
+    color: #122945;
+}
+
+.emptygreenbar {
+    position: absolute;
+    left: 0%;
+    right: 73.74%;
+    top: 95.35%;
+    bottom: 0%;
+    background: #DEE6F5;
+    border-radius: 12px;
+}
+
+.greenbar {
+    position: absolute;
+    left: 0%;
+    right: 73.74%;
+    top: 95.35%;
+    bottom: 0%;
+    background: #DEE6F5;
+    border-radius: 12px;
+}
+
+.greenmark {
+    color: #00A775;
+}
+
+.qualitytext {
+    position: absolute;
+    width: 164px;
+    height: 21px;
+    left: 218px;
+    top: calc(50% - 21px/2 - 6.5px);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: flex-end;
+    color: #122945;
+}
+
+.emptyyellowbar {
+    position: absolute;
+    left: 36.7%;
+    right: 37.04%;
+    top: 95.35%;
+    bottom: 0%;
+    background: #DEE6F5;
+    border-radius: 12px;
+}
+
+.yellowbar {
+    position: absolute;
+    left: 36.7%;
+    right: 52.02%;
+    top: 95.35%;
+    bottom: 0%;
+    background: #FFD500;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.yellowmark {
+    color: #FFB800;
+}
+
+.conversiontext {
+    position: absolute;
+    width: 145px;
+    height: 21px;
+    left: 438px;
+    top: calc(50% - 21px/2 - 6.5px);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: flex-end;
+    color: #122945;
+}
+
+.emptyredbar {
+    position: absolute;
+    left: 73.74%;
+    right: 0%;
+    top: 95.35%;
+    bottom: 0%;
+    background: #DEE6F5;
+    border-radius: 12px;
+}
+
+.redbar {
+    position: absolute;
+    left: 73.74%;
+    right: 13.13%;
+    top: 95.35%;
+    bottom: 0%;
+    background: #EA1A4F;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.redmark {
+    color: #EA1A4F;
+}
+
+.search {
+    position: absolute;
+    left: 64.23%;
+    right: 33.87%;
+    top: 32.5%;
+    bottom: 12.5%;
+}
+
+.user {
+    position: absolute;
+    width: 262px;
+    height: 21px;
+    left: 1167px;
+    top: calc(50% - 21px/2 - 0.5px);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    color: #899CB1;
+}
+
+.openarrow {
+    position: absolute;
+    left: 85.3%;
+    right: 13.27%;
+    top: 44.81%;
+    bottom: 29.69%;
+}
+
+.avatar {
+    position: absolute;
+    width: 68px;
+    height: 40px;
+    left: 1497px;
+    bottom: 12px;
+}
+
+.avatarimage {
+    position: absolute;
+    left: 1.47%;
+    right: 39.71%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.downarrow {
+    position: absolute;
+    left: 66.18%;
+    right: -1.47%;
+    top: 44.81%;
+    bottom: 17.5%;
 }

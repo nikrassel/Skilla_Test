@@ -19,7 +19,7 @@ const SideBar = () => {
                                 <img className='point' src="/img/new.png" alt="point" />
                             </li>
                         ) : (
-                            <li className='menuitem'>
+                            <li className='menuitem' key={item}>
                                 <img className='itemimg' src={`/img/${item}.png`} alt="navigate" />
                                 <p className='itemtext'>
                                     {item}
