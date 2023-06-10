@@ -1,11 +1,14 @@
 import './App.css';
 import AppLoader from './component/ui/appLoader';
+import SideBar from './component/page/sidebar/sidebar';
+import Header from './component/page/header/header';
 
 function App() {
   return (
     <AppLoader>
       <div className="App">
-        <h1>New App</h1>
+        <SideBar />
+        <Header />
       </div>
     </AppLoader>
   );

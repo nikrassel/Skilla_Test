@@ -1,0 +1,25 @@
+.headerbody {
+    position: absolute;
+    width: 1680px;
+    height: 64px;
+    left: 240px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px #E9EDF3;
+}
+
+.datecomponent {
+    position: absolute;
+    width: 90px;
+    height: 22px;
+    left: 120px;
+    top: calc(50% - 22px/2);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 148%;
+    display: flex;
+    align-items: flex-end;
+    color: #899CB1;
+}
