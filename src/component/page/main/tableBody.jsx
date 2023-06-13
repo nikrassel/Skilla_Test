@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import "./index.css"
 import callTime from '../../../utils/callTime';
+import { useDispatch } from "react-redux"
+import { loadRecord } from '../../../store/records';
 
 const TableBody = ({ calls }) => {
+    const dispatch = useDispatch()
     const [showRecord, setShowRecord] = useState("")
     function handleShowRecord(target) {
+        const callId = target.target.id
+        setShowRecord(callId)
+    }
+    function handlePlayRecord(target) {
         const recordId = target.target.id
-        setShowRecord(recordId)
+        dispatch(loadRecord(recordId))
     }
     // function handleHideRecord() {
     //     setShowRecord("")
@@ -16,7 +23,7 @@ const TableBody = ({ calls }) => {
             {calls.map((item) => (
                 <tr id={item.id} key={item.id} className='tablecontent' onMouseEnter={handleShowRecord}>
                     <td className='typecol'>
-                        <img src={item.in_out ? "/img/outcoming.png" : "/img/incoming.png"} alt="calltype" />
+                        <img src={item.in_out === 1 ? "/img/outcoming.png" : "/img/incoming.png"} alt="calltype" />
                     </td>
                     <td className='timecol'>
                         <p>{item.date.slice(11, 16)}</p>
@@ -35,11 +42,11 @@ const TableBody = ({ calls }) => {
                         </td>
                     )}
                     {item.record && showRecord.includes(item.id) && (
-                        <tr className='record'>
-                            <img className='playbutton' src="/img/play.png" alt="play" />
+                        <td className='record'>
+                            <img id={item.record} className='playbutton' src="/img/play.png" alt="play" onClick={handlePlayRecord} />
                             <img className='recordline' src="/img/recordline.png" alt="line" />
                             <img className='download' src="/img/download.png" alt="download" />
-                        </tr>
+                        </td>
                     )}
                     {item.time > 0 && (
                         <td className='longcol'>

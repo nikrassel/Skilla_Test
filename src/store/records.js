@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import requestRecord from "../utils/recordRequest"
 
 const callsSlice = createSlice({
     name: "records",
@@ -25,12 +26,14 @@ const callsSlice = createSlice({
 const { reducer: recordsReducer, actions } = callsSlice
 const { recordRequested, recordReceved, recordRequestedFailed } = actions
 
-export const loadCalls = (data) => async (dispatch) => {
+export const loadRecord = (data) => async (dispatch) => {
     dispatch(recordRequested())
     try {
-        const content = await request(data)
+        const content = await requestRecord(data)
         dispatch(recordReceved(content))
     } catch (error) {
         dispatch(recordRequestedFailed(error.message))
     }
 }
+
+export default recordsReducer

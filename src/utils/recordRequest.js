@@ -6,8 +6,10 @@ export default async function requestRecord(data) {
                 "Authorization": "Bearer testtoken"
             }
         })
-        const receved = await response.json()
-        const result = receved.results
+        const result = await response.blob()
+        const source = window.URL.createObjectURL(result)
+        const audioObj = new Audio(source)
+        audioObj.play()
         return result
     } catch (error) {
         console.log(error.message)

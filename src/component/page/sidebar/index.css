@@ -1,7 +1,7 @@
 .sidebar-zone {
-    position: absolute;
+    position: fixed;
     width: 240px;
-    height: 2730px;
+    height: 100vh;
     left: 0px;
     top: 0px;
     background: #091336;

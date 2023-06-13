@@ -6,10 +6,11 @@ import TableBody from './tableBody';
 const Calls = ({ calls, type }) => {
     let filtredCalls
     if(type === "Входящие") {
-        filtredCalls = calls.filter((call) => call.in_out === 1)
-    } else if (type === "Исходящие") {
         filtredCalls = calls.filter((call) => call.in_out === 0)
+    } else if (type === "Исходящие") {
+        filtredCalls = calls.filter((call) => call.in_out === 1)
     } else { filtredCalls = [ ...calls ] }
+    console.log(filtredCalls)
     return (
         <div className='calls'>
             <table className='callstable'>
