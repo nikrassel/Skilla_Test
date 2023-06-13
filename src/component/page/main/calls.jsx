@@ -10,7 +10,6 @@ const Calls = ({ calls, type }) => {
     } else if (type === "Исходящие") {
         filtredCalls = calls.filter((call) => call.in_out === 1)
     } else { filtredCalls = [ ...calls ] }
-    console.log(filtredCalls)
     return (
         <div className='calls'>
             <table className='callstable'>

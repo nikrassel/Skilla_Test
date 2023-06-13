@@ -176,10 +176,17 @@
 
 .droppoint {
     cursor: pointer;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
 }
 
 .markedpoint {
     background-color: #D8E4FB;
+}
+
+.typedrop {
+    width: 100px;
 }
 
 .datedrop {

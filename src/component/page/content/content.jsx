@@ -9,18 +9,23 @@ import { getCalls, getLoadingStatus } from '../../../store/calls';
 
 const Content = () => {
     const calls = useSelector(getCalls())
+    const callsTypes = {
+        incoming: "Входящие",
+        outcoming: "Исходящие",
+        allTypes: "Все типы"
+    }
     const loadingStatus = useSelector(getLoadingStatus())
-    const [types, setTypes] = useState("Все типы")
+    const [currentType, setCurrentType] = useState("Все типы")
     function handleSwitchType(value) {
-        setTypes(value)
+        setCurrentType(callsTypes[value])
     }
     return (
         <div className='maincontent'>
             <Balance />
             <DatePicker />
-            <Filters type={types} onChange={handleSwitchType}/>
+            <Filters type={currentType} onChange={handleSwitchType}/>
             {!loadingStatus && calls
-                ? (<Calls calls={calls} type={types}/>)
+                ? (<Calls calls={calls} type={currentType}/>)
                 : (<h2 className='loadingstatus'>Loading...</h2>)
             }
         </div>

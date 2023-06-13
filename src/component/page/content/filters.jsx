@@ -11,6 +11,20 @@ const Filters = ({ type, onChange}) => {
         onChange(newValue)
         setIsOpen(!isOpen)
     }
+    function handleMark(target) {
+        const element = document.querySelector(`#${target.target.id}`)
+        element.classList.add("markedpoint")
+    }
+    function handleRemoveMark(target) {
+        const element = document.querySelector(`#${target.target.id}`)
+        element.classList.remove("markedpoint")
+    }
+    document.addEventListener("mousedown", (e) => {
+        const menu = document.querySelector("#typedrop")
+        if (isOpen && menu && !menu.contains(e.target)) {
+            setIsOpen(false)
+        }
+    })
     return (
         <div className='filtersrow'>
             <div className='search'>
@@ -23,13 +37,13 @@ const Filters = ({ type, onChange}) => {
                 <div className='filtercomponent'>
                     <p className='filtertext arrows' onClick={handleOpenDropdown}>
                         {type}
-                        <img className='arrows' src="/img/opennarrow.png" alt="openarrow" onClick={handleOpenDropdown}/>
+                        <img className='arrows' src={isOpen ? "/img/arrowup.png" : "/img/opennarrow.png"} alt="openarrow" onClick={handleOpenDropdown}/>
                     </p>
                     {isOpen && (
-                        <div className='dropdown'>
-                            <p className='droppoint' id="Входящие" onClick={handleChooseType}>Входящие</p>
-                            <p className='droppoint' id="Исходящие" onClick={handleChooseType}>Исходящие</p>
-                            <p className='droppoint' id="Все типы" onClick={handleChooseType}>Все типы</p>
+                        <div className='dropdown typedrop' id='typedrop'>
+                            <p className='droppoint' id="incoming" onClick={handleChooseType} onMouseOver={handleMark} onMouseLeave={handleRemoveMark}>Входящие</p>
+                            <p className='droppoint' id="outcoming" onClick={handleChooseType} onMouseOver={handleMark} onMouseLeave={handleRemoveMark}>Исходящие</p>
+                            <p className='droppoint' id="allTypes" onClick={handleChooseType} onMouseOver={handleMark} onMouseLeave={handleRemoveMark}>Все типы</p>
                         </div>
                     )}
                 </div>

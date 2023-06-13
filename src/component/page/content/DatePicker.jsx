@@ -34,6 +34,7 @@ const DatePicker = () => {
         setDays(interval)
         const period = requestDate(interval-1)
         dispatch(loadCalls(period))
+        setIsOpen(false)
     }
     function handlePersonalInterval(){
         const dateFrom = document.querySelector(".datefrom")
@@ -42,6 +43,7 @@ const DatePicker = () => {
         if (dateFrom.value && dateTo.value && periodValid) {
             dispatch(loadCallsPeriod(dateFrom.value, dateTo.value))
         }
+        setIsOpen(false)
     }
     function handleMark(target) {
         const element = document.querySelector(`#${target.target.id}`)
@@ -51,6 +53,12 @@ const DatePicker = () => {
         const element = document.querySelector(`#${target.target.id}`)
         element.classList.remove("markedpoint")
     }
+    document.addEventListener("mousedown", (e) => {
+        const menu = document.querySelector("#datedrop")
+        if (isOpen && menu && !menu.contains(e.target)) {
+            setIsOpen(false)
+        }
+    })
     return (
         <div className='datepicker'>
             <div className='frame'>
@@ -58,13 +66,12 @@ const DatePicker = () => {
                 <img className='calendar' src="/img/icon-calendar.png" alt="calendar" />
                 <p className='frametext arrows' onClick={handleOpenDropdown}>{`${days} ${dayCorrector(days)}`}</p>
                 {isOpen && (
-                        <div className='dropdown datedrop'>
+                        <div className='dropdown datedrop' id='datedrop'>
                             <p className='07 droppoint' id='week' onClick={handleSetInterval} onMouseOver={handleMark} onMouseLeave={handleRemoveMark}>Неделя</p>
                             <p className='30 droppoint' id='month' onClick={handleSetInterval} onMouseOver={handleMark} onMouseLeave={handleRemoveMark}>Месяц</p>
                             <p className='365 droppoint' id='year' onClick={handleSetInterval} onMouseOver={handleMark} onMouseLeave={handleRemoveMark}>Год</p>
-                            <p>От</p>
+                            <p>Указать даты</p>
                             <input className='datefrom' type="date" onChange={handlePersonalInterval}/>
-                            <p>До</p>
                             <input className='dateto' type="date" onChange={handlePersonalInterval}/>
                         </div>
                     )}
