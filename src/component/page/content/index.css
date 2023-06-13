@@ -164,7 +164,7 @@
     top: 135px;
 }
 
-.typedrop {
+.dropdown {
     position: absolute;
     left: 0px;
     top: 25px;
@@ -176,4 +176,12 @@
 
 .droppoint {
     cursor: pointer;
+}
+
+.markedpoint {
+    background-color: #D8E4FB;
+}
+
+.datedrop {
+    width: 100%;
 }

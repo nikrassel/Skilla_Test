@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import request from "../utils/callsRequest"
+import request, { requestPeriod } from "../utils/callsRequest"
 
 const callsSlice = createSlice({
     name: "calls",
@@ -30,6 +30,16 @@ export const loadCalls = (data) => async (dispatch) => {
     dispatch(callsRequested())
     try {
         const content = await request(data)
+        dispatch(callsReceved(content))
+    } catch (error) {
+        dispatch(callsRequestedFailed(error.message))
+    }
+}
+
+export const loadCallsPeriod = (from, to) => async (dispatch) => {
+    dispatch(callsRequested())
+    try {
+        const content = await requestPeriod(from, to)
         dispatch(callsReceved(content))
     } catch (error) {
         dispatch(callsRequestedFailed(error.message))

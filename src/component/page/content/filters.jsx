@@ -26,7 +26,7 @@ const Filters = ({ type, onChange}) => {
                         <img className='arrows' src="/img/opennarrow.png" alt="openarrow" onClick={handleOpenDropdown}/>
                     </p>
                     {isOpen && (
-                        <div className='typedrop'>
+                        <div className='dropdown'>
                             <p className='droppoint' id="Входящие" onClick={handleChooseType}>Входящие</p>
                             <p className='droppoint' id="Исходящие" onClick={handleChooseType}>Исходящие</p>
                             <p className='droppoint' id="Все типы" onClick={handleChooseType}>Все типы</p>
