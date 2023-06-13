@@ -1,0 +1,169 @@
+.calls {
+    position: absolute;
+    width: 1440px;
+    height: 1985px;
+    left: 0px;
+    top: 135px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px #E9EDF3;
+    border-radius: 8px;
+}
+
+.callstable {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    position: absolute;
+    width: 1440px;
+    height: 1904px;
+    left: 0px;
+    top: 48px;
+}
+
+.headertext {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #899CB1;
+}
+
+.type {
+    position: absolute;
+    left: 2.78%;
+    right: 95.62%;
+}
+
+.time {
+    position: absolute;
+    left: 6.46%;
+    right: 90.69%;
+}
+
+.personal {
+    position: absolute;
+    left: 12.64%;
+    right: 82.64%;
+}
+
+.number {
+    position: absolute;
+    left: 21.53%;
+    right: 75.35%;
+}
+
+.source {
+    position: absolute;
+    left: 44.17%;
+    right: 51.67%;
+}
+
+.rate {
+    position: absolute;
+    left: 59.03%;
+    right: 37.71%;
+}
+
+.long {
+    position: absolute;
+    left: 91.04%;
+    right: 2.78%;
+}
+
+.tablecontent {
+    width: 1440px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.typecol {
+    position: absolute;
+    left: 2.86%;
+    right: 95.43%;
+}
+
+.timecol {
+    position: absolute;
+    left: 6.86%;
+    right: 90.43%;
+}
+
+.avatarcol {
+    position: absolute;
+    left: 13%;
+    right: 84.71%;
+}
+
+.numbercol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 0px;
+    gap: 4px;
+    position: absolute;
+    width: 246px;
+    height: 47px;
+    left: 310px;
+}
+
+.sourcecol {
+    position: absolute;
+    width: 61px;
+    left: calc(50% - 61px/2 - 33.5px);
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    color: #5E7793;
+}
+
+.longcol {
+    position: absolute;
+    left: 97.29%;
+    right: 0%;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.01em;
+    color: #122945;
+}
+
+.record {
+    position: absolute;
+    width: 352px;
+    height: 48px;
+    left: 1048px;
+    align-items: center;
+    text-align: center;
+}
+
+.playbutton {
+    position: absolute;
+    left: 5px;
+    top: 20px;
+}
+
+.recordline {
+    position: absolute;
+    left: 25px;
+    top: 23px;
+}
+
+.download {
+    position: absolute;
+    left: 200px;
+    top: 18px;
+}

@@ -1,8 +1,6 @@
-import { getCurrentDate } from "./requestDate"
-
-export default async function request(data) {
+export default async function requestRecord(data) {
     try {
-        const response = await fetch(`https://api.skilla.ru/mango/getList?date_start=${data}&date_end=${getCurrentDate()}`, {
+        const response = await fetch(`https://api.skilla.ru/mango/getRecord?record=${data}`, {
             method: "POST",
             headers: {
                 "Authorization": "Bearer testtoken"

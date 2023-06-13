@@ -26,14 +26,17 @@ const callsSlice = createSlice({
 const { reducer: callsReducer, actions } = callsSlice
 const { callsRequested, callsReceved, callsRequestedFailed } = actions
 
-export const loadCalls = () => async (dispatch) => {
+export const loadCalls = (data) => async (dispatch) => {
     dispatch(callsRequested())
     try {
-        const content = await request()
+        const content = await request(data)
         dispatch(callsReceved(content))
     } catch (error) {
         dispatch(callsRequestedFailed(error.message))
     }
 }
+
+export const getCalls = () => (state) => state.calls.entities
+export const getLoadingStatus = () => (state) => state.calls.isLoading
 
 export default callsReducer

@@ -8,7 +8,7 @@ const Header = () => {
         <div className='headerbody'>
             <DateToday />
             <CallsAnalytics />
-            <img className='search' src="/img/search.png" alt="search" />
+            <img className='searchuser' src="/img/search.png" alt="search" />
             <div className='user'>ИП Сидорова Александра Михайловна</div>
             <img className='openarrow' src="/img/opennarrow.png" alt="open" />
             <div className='avatar'>
