@@ -13,15 +13,15 @@ export default function requestDate(days) {
     const year = corTime.getFullYear()
     const month = corTime.getMonth()
     const day = corTime.getDate()
-    const result = `${year}-${corrector(month+1)}-${corrector(day)}`
+    const result = `${year}-${corrector(month + 1)}-${corrector(day)}`
     return result
 }
 
 export function getCurrentDate() {
-    const today = new Date (Date.now())
+    const today = new Date(Date.now())
     const year = today.getFullYear()
     const month = today.getMonth()
     const day = today.getDate()
-    const result = `${year}-${corrector(month+1)}-${corrector(day)}`
+    const result = `${year}-${corrector(month + 1)}-${corrector(day)}`
     return result
 }

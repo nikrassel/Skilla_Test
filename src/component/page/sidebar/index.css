@@ -1,7 +1,7 @@
 .sidebar-zone {
-    position: fixed;
+    position: absolute;
     width: 240px;
-    height: 100vh;
+    height: 2730px;
     left: 0px;
     top: 0px;
     background: #091336;
@@ -33,7 +33,7 @@
     background: #091336;
     display: flex;
     align-items: center;
-    font-family: 'SF Pro Display';
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -57,7 +57,7 @@
     height: 52px;
     align-items: center;
     display: flex;
-    font-family: 'SF Pro Display';
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -86,7 +86,7 @@
     height: 52px;
     left: 20px;
     top: 664px;
-    background: #005FF8;
+    background: #005ff8;
     border-radius: 4px;
 }
 
@@ -96,7 +96,7 @@
     height: 52px;
     left: 20px;
     top: 748px;
-    background: #005FF8;
+    background: #005ff8;
     border-radius: 4px;
 }
 
@@ -106,12 +106,12 @@
     height: 24px;
     left: 24px;
     top: -5px;
-    font-family: 'SF Pro Display';
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 148%;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .buttonelement {
@@ -121,5 +121,3 @@
     left: 156px;
     top: 12px;
 }
-
-

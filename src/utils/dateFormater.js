@@ -23,5 +23,7 @@ const days = [
 ]
 export default function dateFormater(dateObj) {
     const corTime = new Date(Number(dateObj))
-    return `${days[corTime.getDay()]} ${corTime.getDate()} ${months[corTime.getMonth()]}`
+    return `${days[corTime.getDay()]} ${corTime.getDate()} ${
+        months[corTime.getMonth()]
+    }`
 }

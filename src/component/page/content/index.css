@@ -12,7 +12,7 @@
     height: 40px;
     left: 1132px;
     top: 7px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 48px;
 }
 
@@ -21,8 +21,8 @@
     width: 87px;
     height: 21px;
     left: 12px;
-    top: calc(50% - 21px/2 + 0.5px);
-    font-family: 'SF Pro Display';
+    top: calc(50% - 21px / 2 + 0.5px);
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -30,7 +30,7 @@
     display: flex;
     align-items: flex-end;
     text-align: right;
-    color: #899CB1;
+    color: #899cb1;
 }
 
 .markedtext {
@@ -43,7 +43,7 @@
     height: 24px;
     left: 109px;
     top: 20px;
-    color: #005FF8;
+    color: #005ff8;
 }
 
 .datepicker {
@@ -74,13 +74,13 @@
 }
 
 .frametext {
-    font-family: 'SF Pro Display';
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     text-align: right;
-    color: #005FF8;
+    color: #005ff8;
 }
 
 .filtersrow {
@@ -113,12 +113,12 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
-    font-family: 'SF Pro Display';
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    color: #5E7793;
+    color: #5e7793;
 }
 
 .filtersline {
@@ -147,15 +147,22 @@
 .filtertext {
     width: 120px;
     height: 21px;
-    font-family: 'SF Pro Display';
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 148%;
     display: flex;
     align-items: center;
-    color: #5E7793;
     opacity: 0.87;
+}
+
+.active {
+    color: #002cfb;
+}
+
+.inactive {
+    color: #5e7793;
 }
 
 .loadingstatus {
@@ -164,12 +171,33 @@
     top: 135px;
 }
 
+.abortcomponent {
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    left: 360px;
+    top: 80px;
+}
+
+.aborttext {
+    width: 160px;
+    height: 21px;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: center;
+    opacity: 0.87;
+}
+
 .dropdown {
     position: absolute;
     left: 0px;
     top: 25px;
     z-index: 9;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 5%;
     box-shadow: 1px 1px 5px 5px #b6bdc4;
 }
@@ -182,7 +210,7 @@
 }
 
 .markedpoint {
-    background-color: #D8E4FB;
+    background-color: #d8e4fb;
 }
 
 .typedrop {

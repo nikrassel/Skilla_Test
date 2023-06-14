@@ -9,11 +9,15 @@ export default function periodChecker(from, to) {
         Number(to.slice(5, 7)),
         Number(to.slice(8, 10))
     ]
-    if(toArray[0] > fromArray[0]) {
+    if (toArray[0] > fromArray[0]) {
         return true
     } else if (toArray[0] >= fromArray[0] && toArray[1] > fromArray[1]) {
         return true
-    } else if (toArray[0] >= fromArray[0] && toArray[1] >= fromArray[1] && toArray[2] >= fromArray[2]) {
+    } else if (
+        toArray[0] >= fromArray[0] &&
+        toArray[1] >= fromArray[1] &&
+        toArray[2] >= fromArray[2]
+    ) {
         return true
     } else {
         return false

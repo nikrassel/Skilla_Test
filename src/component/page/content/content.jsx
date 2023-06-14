@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 import "./index.css"
-import Balance from './balance';
-import DatePicker from './DatePicker';
-import Filters from './filters';
-import Calls from '../main/calls';
-import { useSelector } from 'react-redux';
-import { getCalls, getLoadingStatus } from '../../../store/calls';
+import Balance from "./balance"
+import DatePicker from "./DatePicker"
+import Filters from "./filters"
+import Calls from "../main/calls"
+import { useSelector } from "react-redux"
+import { getCalls, getLoadingStatus } from "../../../store/calls"
 
 const Content = () => {
     const calls = useSelector(getCalls())
@@ -20,16 +20,17 @@ const Content = () => {
         setCurrentType(callsTypes[value])
     }
     return (
-        <div className='maincontent'>
+        <div className="maincontent">
             <Balance />
             <DatePicker />
-            <Filters type={currentType} onChange={handleSwitchType}/>
-            {!loadingStatus && calls
-                ? (<Calls calls={calls} type={currentType}/>)
-                : (<h2 className='loadingstatus'>Loading...</h2>)
-            }
+            <Filters type={currentType} onChange={handleSwitchType} />
+            {!loadingStatus && calls ? (
+                <Calls calls={calls} type={currentType} />
+            ) : (
+                <h2 className="loadingstatus">Loading...</h2>
+            )}
         </div>
-    );
+    )
 }
- 
-export default Content;
+
+export default Content
