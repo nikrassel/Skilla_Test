@@ -2,32 +2,32 @@ import React from "react"
 import "./index.css"
 
 const SideBar = () => {
-    const navigation = [
-        "Итоги",
-        "Заказы",
-        "Сообщения",
-        "Звонки",
-        "Контакты",
-        "Документы",
-        "Исполнители",
-        "Отчеты",
-        "База знаний",
-        "Настройки"
-    ]
+    const navigation = {
+        "results": "Итоги",
+        "orders": "Заказы",
+        "messages": "Сообщения",
+        "calls": "Звонки",
+        "contacts": "Контрагенты",
+        "documents": "Документы",
+        "executors": "Исполнители",
+        "reports": "Отчеты",
+        "knowlegeBase": "База знаний",
+        "settings": "Настройки"
+    }
     return (
         <div className="sidebar-zone">
             <div className="sidebar-body">
                 <img className="logo" src="/img/logo.png" alt="logo" />
                 <ul className="menu">
-                    {navigation.map((item) =>
-                        item === "Звонки" ? (
+                    {Object.keys(navigation).map((item) =>
+                        item === "calls" ? (
                             <li className="current" key={item}>
                                 <img
                                     className="itemimg"
                                     src={`/img/${item}.png`}
                                     alt="navigate"
                                 />
-                                <p className="itemtext">{item}</p>
+                                <p className="itemtext">{navigation[item]}</p>
                                 <img
                                     className="point"
                                     src="/img/new.png"
@@ -41,7 +41,7 @@ const SideBar = () => {
                                     src={`/img/${item}.png`}
                                     alt="navigate"
                                 />
-                                <p className="itemtext">{item}</p>
+                                <p className="itemtext">{navigation[item]}</p>
                             </li>
                         )
                     )}
