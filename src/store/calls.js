@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import request from "../utils/callsRequest"
+import request, { requestPeriod } from "../utils/callsRequest"
 
 const callsSlice = createSlice({
     name: "calls",
@@ -26,14 +26,27 @@ const callsSlice = createSlice({
 const { reducer: callsReducer, actions } = callsSlice
 const { callsRequested, callsReceved, callsRequestedFailed } = actions
 
-export const loadCalls = () => async (dispatch) => {
+export const loadCalls = (data) => async (dispatch) => {
     dispatch(callsRequested())
     try {
-        const content = await request()
+        const content = await request(data)
         dispatch(callsReceved(content))
     } catch (error) {
         dispatch(callsRequestedFailed(error.message))
     }
 }
+
+export const loadCallsPeriod = (from, to) => async (dispatch) => {
+    dispatch(callsRequested())
+    try {
+        const content = await requestPeriod(from, to)
+        dispatch(callsReceved(content))
+    } catch (error) {
+        dispatch(callsRequestedFailed(error.message))
+    }
+}
+
+export const getCalls = () => (state) => state.calls.entities
+export const getLoadingStatus = () => (state) => state.calls.isLoading
 
 export default callsReducer

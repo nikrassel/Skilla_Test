@@ -1,0 +1,222 @@
+.maincontent {
+    position: absolute;
+    width: 1500px;
+    height: 2120px;
+    left: 360px;
+    top: 64px;
+}
+
+.balance {
+    position: absolute;
+    width: 145px;
+    height: 40px;
+    left: 1132px;
+    top: 7px;
+    background: #ffffff;
+    border-radius: 48px;
+}
+
+.balancetext {
+    position: absolute;
+    width: 87px;
+    height: 21px;
+    left: 12px;
+    top: calc(50% - 21px / 2 + 0.5px);
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    color: #899cb1;
+}
+
+.markedtext {
+    color: #122945;
+}
+
+.balanceadd {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 109px;
+    top: 20px;
+    color: #005ff8;
+}
+
+.datepicker {
+    position: absolute;
+    width: 115px;
+    height: 24px;
+    left: 1325px;
+    top: 28px;
+}
+
+.frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.arrows {
+    cursor: pointer;
+    z-index: 9;
+}
+
+.frametext {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    color: #005ff8;
+}
+
+.filtersrow {
+    position: absolute;
+    width: 1440px;
+    height: 48px;
+    left: 0px;
+    top: 20px;
+}
+
+.search {
+    position: absolute;
+    width: 482px;
+    height: 48px;
+    left: 0px;
+    top: 80px;
+}
+
+.searchicon {
+    position: absolute;
+    left: 0%;
+    right: 88.57%;
+    top: 30%;
+    bottom: 10%;
+}
+
+.searchplaceholed {
+    position: absolute;
+    left: 5%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #5e7793;
+}
+
+.filtersline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+    position: absolute;
+    width: 753px;
+    height: 21px;
+    right: 170px;
+    top: 94px;
+}
+
+.filtercomponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 121px;
+    height: 21px;
+}
+
+.filtertext {
+    width: 120px;
+    height: 21px;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: center;
+    opacity: 0.87;
+}
+
+.active {
+    color: #002cfb;
+}
+
+.inactive {
+    color: #5e7793;
+}
+
+.loadingstatus {
+    position: absolute;
+    left: 0px;
+    top: 135px;
+}
+
+.abortcomponent {
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    left: 360px;
+    top: 80px;
+}
+
+.aborttext {
+    width: 160px;
+    height: 21px;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    display: flex;
+    align-items: center;
+    opacity: 0.87;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0px;
+    top: 25px;
+    z-index: 9;
+    background-color: #ffffff;
+    border-radius: 5%;
+    box-shadow: 1px 1px 5px 5px #b6bdc4;
+}
+
+.droppoint {
+    cursor: pointer;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+}
+
+.markedpoint {
+    background-color: #d8e4fb;
+}
+
+.typedrop {
+    width: 100px;
+}
+
+.datedrop {
+    width: 100%;
+}
