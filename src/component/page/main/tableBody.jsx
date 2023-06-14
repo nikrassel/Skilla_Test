@@ -53,6 +53,11 @@ const TableBody = ({ calls }) => {
                             <p>{item.source}</p>
                         </td>
                     )}
+                    {item.errors && (
+                        <td className="markcol">
+                            <p>{item.errors[0]}</p>
+                        </td>
+                    )}
                     {item.record && showRecord.includes(item.id) && (
                         <td className="record">
                             <img

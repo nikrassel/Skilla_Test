@@ -125,6 +125,21 @@
     color: #5e7793;
 }
 
+.markcol {
+    position: absolute;
+    width: 146px;
+    height: 20px;
+    left: 852px;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    align-items: center;
+    display: flex;
+    color: #ea1a4f;
+}
+
 .longcol {
     position: absolute;
     left: 95.29%;
